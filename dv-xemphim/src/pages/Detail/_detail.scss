@@ -1,0 +1,102 @@
+#detail{
+    margin-top: 3.1rem;
+    padding:3rem 0;
+    background-image: url('./../../assets/images/background.jpg');
+    background-attachment: fixed;
+    .detail__trailer{
+        width: 80%;
+        margin: 0 auto;
+        .trailer{
+            img{
+                width: 237px;
+                height: 330px;
+            }
+            .booking{
+                margin-top: 1rem;
+            }
+        }
+        
+        .detail__text{
+            h3{
+                color: orangered;
+            }
+            color: white;
+            font-size: 15px;
+            span{
+                color: orangered;
+                font-weight: bold;
+            }
+        }
+
+    }
+    #lich{
+        padding-top: 3rem;
+        color: orangered;
+        font-size: 25px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .showsTime{
+        padding: 1rem;
+        border-radius: 5px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: white;
+            .showTheater{
+                border-right: 1px solid black;
+                .theater_item{
+                    cursor: pointer;
+                    padding-bottom: 1rem;
+                    border-bottom: 1px solid black;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    img{
+                        width: 60px;
+                    }
+                    span{
+                        color: orangered;
+                        font-size: 15px;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            .showTime{
+                .day{
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    flex-wrap: nowrap;
+                    overflow-y: auto;
+                    .day_show{
+                        height: auto;
+                        padding: 2px;
+                        font-size: 25px;
+                        margin-right: 1rem;
+                        color: black;
+                        cursor: pointer;
+                    }
+                }
+                .hour{
+                    .hour__theater{
+                        margin-top: 1rem;
+                        display: flex;
+                        align-items: center;
+                        span{
+                            color: orangered;
+                        }
+                        img{
+                            width: 60px;
+                            margin-right: 20px;
+                        }
+                    }
+                    p{
+                        margin-top: 1rem;
+                        color: black;
+                        font-weight: bold;
+                    }
+                }
+            }
+    }
+    
+}
