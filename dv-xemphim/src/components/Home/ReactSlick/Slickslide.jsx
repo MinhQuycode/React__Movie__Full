@@ -33,7 +33,7 @@ function Slickslide(props) {
         autoplaySpeed: 2000,
         slidesToShow: 4,
         slidesToScroll:4,
-        autoplay: false,
+        autoplay: true,
         arrows: true,
         responsive: [
             {

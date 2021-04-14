@@ -17,7 +17,7 @@ import {useDispatch} from 'react-redux';
 import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Error from '../../Layouts/Error/Error';
-import Loading from '../../Layouts/Loading/Loading'
+import ScrollToTop from "../../Layouts/ScrollToTop/ScrollToTop";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -81,9 +81,9 @@ function SignIn(props) {
     // console.log(history);
     console.log(user);
   };
-  // if(props.loading) return <Loading/>
   return (
     <Container component="main" maxWidth="xs">
+      <ScrollToTop/>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>

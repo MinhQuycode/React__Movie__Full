@@ -26,12 +26,13 @@ export const postShowTimesChoose = (idTheaterChoosed) => {
     }
 }
 
-export const postTheaterGroup = (maHeThongRap,logo) =>{
+export const postTheaterGroup = (maHeThongRap,logo,idChoose) =>{
     return {
         type : POST_THEATERGROUP_CHOOSED,
         payload : {
             maHeThongRap, 
-            logo
+            logo,
+            idChoose
         }
     }
 }

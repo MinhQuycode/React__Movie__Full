@@ -8,10 +8,10 @@ export default function VideoTrailer(props) {
     return (
         <div className="trailer position-relative">
             <img  className="image" src={props.item?.hinhAnh} alt={props.item.tenPhim}/> 
-            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={props.item?.trailer} onClose={() => setOpen(false)} />
+            {/* <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={props.item?.trailer} onClose={() => setOpen(false)} />
             <button className="btn__trailer" onClick={()=> setOpen(true)}>
                 <img width="60px" src={play} alt="Play"/>
-            </button>
+            </button> */}
         </div>
     )
 }

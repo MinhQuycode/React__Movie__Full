@@ -2,12 +2,8 @@ import React,{useEffect,useState} from 'react';
 import { getShowTimeAPI } from '../../../redux/actions/showtimes.action';
 import {useSelector,useDispatch} from "react-redux";
 import { useHistory } from 'react-router-dom';
-// import Login from "./../../../pages/Login/Login";
-// import Register from "./../../../pages/Register/Register";
 
 function TimeMovie() {
-    const [isOpenSignIn, setIsOpenSignIn] = useState(false);
-    const [isOpenSignUp, setIsOpenSignUp] = useState(false);
     const history = useHistory();
     const idTheaterChoose = useSelector((state) => state.showTimes.idTheaterChoose);
     // console.log(idTheaterChoose)
@@ -35,15 +31,18 @@ function TimeMovie() {
 
 
     return stateShowtime?.length > 0 ? (
-      <div className="col-6 lich__chieu">
+      <div className="col-lg-6 col-md-12 lich__chieu">
         <div className="row">
-          <h3 className="title__chon">Chọn lịch chiếu</h3>
+          <h3 className="title__chon text-center mt-4">Chọn lịch chiếu</h3>
         </div>
         <div className="lich">
           {stateShowtime[0].lstCumRap
             .filter((tile) => tile.maCumRap === idTheaterChoose)
             .map((tile) =>
-              tile.danhSachPhim.map((movie, index) => (
+              tile.danhSachPhim.map((movie, index) => {
+              console.log(movie)
+              if(movie) {
+              return (
                 <div key={index} className="row chieu">
                   <div className="col-4">
                     <img src={movie.hinhAnh} />
@@ -60,22 +59,33 @@ function TimeMovie() {
                     {movie.lstLichChieuTheoPhim.map((lichChieu, index) => (
                       <button
                         key={index}
-                        className="btn btn-info m-2"
+                        className="btn btn-warning m-2"
                         onClick={() => {
                           handleChoiceShowsTime(lichChieu.maLichChieu);
                         }}
-                      >
-                        {lichChieu.ngayChieuGioChieu}
+                      >{lichChieu.ngayChieuGioChieu?.substring(11,16) + "~"}
+                        <b>
+                        {lichChieu.ngayChieuGioChieu?.substring(5,10)}
+                        </b>
                       </button>
                     ))}
                   </div>
                 </div>
-              ))
+                )}
+              else{
+                if(movie === null)
+                return(
+                  <div className="row chieu">
+                    Chưa có lịch chiếu
+                  </div>
+                )
+              }})
             )}
         </div>
       </div>
     ) : (
-      <div></div>
+      <div>
+      </div>
     );
 }
 export default React.memo(TimeMovie);

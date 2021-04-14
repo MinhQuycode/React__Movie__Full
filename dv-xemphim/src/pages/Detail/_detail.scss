@@ -1,5 +1,5 @@
 #detail{
-    margin-top: 3.1rem;
+    margin-top: 3rem;
     padding:3rem 0;
     background-image: url('./../../assets/images/background.jpg');
     background-attachment: fixed;
@@ -44,6 +44,8 @@
         background-color: white;
             .showTheater{
                 border-right: 1px solid black;
+                height: 370px;
+                overflow: auto;
                 .theater_item{
                     cursor: pointer;
                     padding-bottom: 1rem;
@@ -62,6 +64,8 @@
                 }
             }
             .showTime{
+                height: 370px;
+                overflow: auto;
                 .day{
                     display: flex;
                     flex-direction: row;
@@ -98,5 +102,16 @@
                 }
             }
     }
-    
+    .active_theater{
+        opacity: 1;
+    }
+    .non_active_theater{
+        opacity: 0.45;
+    }
+    .display{
+        display: inline-block;
+    }
+    .nonDispkay{
+        display: none;
+    }
 }

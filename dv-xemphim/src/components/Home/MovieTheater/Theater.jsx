@@ -40,9 +40,9 @@ function Theater() {
         )
     }
     return (
-        <div className="col-6 rap">
+        <div className="col-lg-6 col-md-12 rap">
         <div className="row">
-            <h3 className="title__chon">Chọn rạp</h3>
+            <h3 className="title__chon text-center mt-4">Chọn rạp</h3>
         </div>
         <div className="row chon__tenRap">
             {renderTheater()}

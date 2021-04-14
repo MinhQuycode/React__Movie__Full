@@ -55,7 +55,7 @@ const [user,setUser] = useState({
       email :"",
       soDt : "",
       hoTen :"",
-      maNhom :"",
+      maNhom :"GP01",
     },
     errors :{
       taiKhoan :"",
@@ -63,7 +63,7 @@ const [user,setUser] = useState({
       email :"",
       soDt : "",
       hoTen :"",
-      maNhom :"",
+      // maNhom :"",
     }
 });
 const handleChange = (event) =>{
@@ -233,7 +233,7 @@ const handleSubmit = (event) =>{
               />
               <span className="text text-danger">{user.errors.matKhau}</span>
             </Grid>
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 required
@@ -246,7 +246,7 @@ const handleSubmit = (event) =>{
                 onChange={handleChange}
               />
               <span className="text text-danger">{user.errors.maNhom}</span>
-            </Grid>
+            </Grid> */}
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}

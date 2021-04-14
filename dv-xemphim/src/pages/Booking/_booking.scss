@@ -8,7 +8,9 @@
     display: flex;
     justify-content: center;
     .chairRoom {
+      width: 100%;
       display: flex;
+      justify-content: center;
       flex-direction: row;
       border-radius: 5px;
       color: black;
@@ -33,16 +35,6 @@
       }
       .dangChon {
         background-color: grey;
-      }
-    }
-    .text_note {
-      font-weight: bold;
-      font-size: 15px;
-      position: absolute;
-      left: 15%;
-      margin-top: 10px;
-      .text{
-          margin-bottom: 19px;
       }
     }
   }
@@ -167,4 +159,11 @@
       }
     }
   }
+
+//RESPONSIVE
+@media only screen and (max-width: 991px) {
+  .infor__booking{
+    margin-top: 2rem;
+  }
+}
 }

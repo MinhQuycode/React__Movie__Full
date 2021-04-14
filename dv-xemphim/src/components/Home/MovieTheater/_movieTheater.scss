@@ -3,6 +3,7 @@
     padding-top: 3rem;
     width: 80%;
     margin: 0 auto;
+    height: auto;
     .title__cumrap{
         text-align: center;
         font-size: 27px;
@@ -48,7 +49,7 @@
                     .detail__rap{
                         margin-left: 10px;
                         .tenRap{
-                            color: red;
+                            color: orangered;
                             font-size: 20px;
                         }
                     }
@@ -67,12 +68,11 @@
                     margin-bottom: 1rem;
                     img{
                         width: 168px;
-                        height: 230px;
                         border-radius: 7px;
                     }
                     .info_lich{
                         .name__movie{
-                            color: red;
+                            color: orangered;
                             font-size: 25px;
                         }
                         button{

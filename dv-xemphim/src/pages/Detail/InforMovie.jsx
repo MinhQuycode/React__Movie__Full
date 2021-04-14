@@ -44,7 +44,10 @@ export default function InforMovie(props) {
             <span>Thể loại :</span> Don't Know
           </p>
           <p>
-            <span>Ngày khởi chiếu :</span> {props.infor?.ngayKhoiChieu}
+            <span>Ngày khởi chiếu :</span> {
+                    props.infor?.ngayKhoiChieu?.substring(8, 10) +
+										props.infor?.ngayKhoiChieu?.substring(4, 8) +
+										props.infor?.ngayKhoiChieu?.substring(0, 4)}
           </p>
           <p>
             <span>Thời lượng :</span> 120p

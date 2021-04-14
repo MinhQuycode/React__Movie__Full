@@ -1,9 +1,10 @@
 import { SIGN_IN_REQUEST,SIGN_IN_FAILED,SIGN_IN_SUCCESS,LOG_OUT } from "../constants/login.constant";
 
+const user = "userLogin";
 const initialState = {
     loading :false,
     userSignin : null,
-    error :null
+    error :null,
 }
 
 const loginReducer = (state = initialState,action) => {
@@ -29,6 +30,7 @@ const loginReducer = (state = initialState,action) => {
     
     case LOG_OUT:
         localStorage.removeItem("userLogin");
+        localStorage.clear();
         return { ...initialState};    
 
     default:

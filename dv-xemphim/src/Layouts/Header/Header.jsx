@@ -10,9 +10,8 @@ function Header(props) {
   const history = useHistory();
 
   const handleLogout = (event) => {
-    dispatch(actLogout(event));
-    history.push({ pathname: "/home" });
     event.preventDefault();
+    dispatch(actLogout(event,history));
   };
   return (
     <header>
@@ -70,7 +69,7 @@ function Header(props) {
               <>
                 <li className="nav-item">
                   <NavLink className="nav-link" style={{color:"black"}}  to="">
-                    Hi , {props.credential.hoTen}
+                    Hi,{props.credential.hoTen}
                   </NavLink>
                 </li>
                 <li className="nav-item">

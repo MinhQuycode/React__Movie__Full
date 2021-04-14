@@ -8,13 +8,14 @@ import Loading from "./../../Layouts/Loading/Loading";
 import {Redirect} from "react-router-dom";
 import { useParams } from "react-router-dom";
 import ScrollToTop from "../../Layouts/ScrollToTop/ScrollToTop";
+import TimeBooking from "./TimeBooking";
 
 export default function Booking(props) {
   let inforBK = useSelector((state) => state.chair.inforBooking);
   let chairList = useSelector((state) => state.chair.chairList);
   const { id } = useParams();
   const userSignIn = JSON.parse(localStorage.getItem('userLogin'));
-// console.log(userSignIn);
+  // console.log(userSignIn);
   
   const dispatch = useDispatch();
   useEffect(() => {
@@ -41,12 +42,13 @@ export default function Booking(props) {
     });
   };
 
-  if(chairList === null ) return (<Loading/>)
+  if(chairList === null ) return (<Loading/>);
+
   return userSignIn ? (
     <section id="booking" className="container-fluid">
       <ScrollToTop/>
       <div className="row">
-        <div className="col-9">
+        <div className="col-lg-8 col-md-12">
           <div className="row infor__movie">
             <div className="col-6 info__movie">
               <img className="imgMovie" src={inforBK?.hinhAnh} />
@@ -55,51 +57,36 @@ export default function Booking(props) {
                 <p>{inforBK?.diaChi}</p>
               </div>
             </div>
-            <div className="col-6 time__booking text-right">
-              <p>Thời gian giữ ghế</p>
-              <span>1:30</span>
-            </div>
+            <TimeBooking/>
           </div>
           <div className="row screen">
             <img src={screen} />
           </div>
           <div className="row chair">
-            <div className="text_note">
-              <div className="text">A</div>
-              <div className="text">B</div>
-              <div className="text">C</div>
-              <div className="text">D</div>
-              <div className="text">E</div>
-              <div className="text">F</div>
-              <div className="text">G</div>
-              <div className="text">H</div>
-              <div className="text">J</div>
-              <div className="text">K</div>
-            </div>
             {renderChairList()}
           </div>
           <div className="row note">
             <div className="noteseat">
               <span className="note__item">
                 <div className="seat-normal" />
-                <span className="seat-info">Ghế thường</span>
+                <p className="seat-info">Thường</p>
               </span>
               <span className="note__item">
                 <div className="seat-vip" />
-                <span className="seat-info">Ghế VIP</span>
+                <p className="seat-info">VIP</p>
               </span>
               <span className="note__item">
                 <div className="seat-current" />
-                <span className="seat-info">Ghế đang chọn</span>
+                <p className="seat-info">Đang chọn</p>
               </span>
               <span className="note__item">
                 <div className="seat-taken" />
-                <span className="seat-info">Ghế đã có người chọn</span>
+                <p className="seat-info">Đã được chọn</p>
               </span>
             </div>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-lg-4 col-md-12">
           <InforBookChair info={inforBK} />
         </div>
       </div>

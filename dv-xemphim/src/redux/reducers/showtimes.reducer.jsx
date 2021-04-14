@@ -6,6 +6,7 @@ const initialState = {
     theaterGroupChoosed: {
 		maHeThongRap: 'BHDStar',
 		logo: 'http://movie0706.cybersoft.edu.vn/hinhanh/bhd-star-cineplex.png',
+        idChoose : '0',
 	},
 	idTheaterChoose: 'bhd-star-cineplex-3-2',
     error : null,

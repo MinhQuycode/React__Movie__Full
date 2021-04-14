@@ -4,11 +4,12 @@ import {bookingTicketAPI} from "./../../redux/actions/booking.action";
 import visa from "./../../assets/images/visa_mastercard.png";
 import atm from "./../../assets/images/ATM.png";
 import Swal from "sweetalert2";
-import {Redirect} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 
 export default function InforBookChair(props) {
+  const history = useHistory();
   const chairBooking = useSelector((state) => state.chair.chairBooking);
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -28,6 +29,12 @@ export default function InforBookChair(props) {
           },0).toLocaleString()
       )
   }
+  //Kiểm tra trước khi đặt vé 
+  let check;
+  chairBooking.length > 0 ? check = false : check = true;
+  
+  console.log(chairBooking.length)
+console.log(check);
   return (
     <div className="infor__booking">
       <p className="price">{tongTien()} Đ</p>
@@ -52,8 +59,8 @@ export default function InforBookChair(props) {
       </div>
       <div className="line"></div>
       <div className="title__booking">
-        <p>Ghế thường : 75.000Đ</p>
-        <p>Ghế vip : 90.000Đ</p>
+        <p>Thường : 75.000Đ</p>
+        <p>Vip : 90.000Đ</p>
       </div>
       <div className="line"></div>
       <div className="title__booking">
@@ -93,8 +100,7 @@ export default function InforBookChair(props) {
             </div>
         </div>
       </div>
-      <button className="btn__booking mt-4" onClick={()=>{
-          if(chairBooking !== []){
+      <button disabled={check} className="btn__booking mt-4" onClick={()=>{
             Swal.fire({
                 title: "Bạn muốn đặt vé ?",
                 icon: "question",
@@ -103,16 +109,12 @@ export default function InforBookChair(props) {
                 cancelButtonText: "Hủy",
               }).then((result) => {
                 if (result.value) {
-                  Swal.fire("Đã đặt vé", "Thành công");
+                  history.push({ pathname: `/` });
+                  window.location.reload();
+                  Swal.fire("Đã đặt vé thành công");
                   dispatch(bookingTicketAPI(id,chairBooking));
                 }
               });
-          }else if(chairBooking === []){
-            Swal.fire({
-                title: "Bạn chưa chọn ghế !",
-                icon: "warning",
-              })
-          }
       }}>THANH TOÁN</button>
     </div>
   ) 
