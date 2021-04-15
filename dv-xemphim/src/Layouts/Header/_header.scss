@@ -26,9 +26,8 @@ header {
                 }
                 &:focus {
                     outline: none !important;
-                    border-color: transparent;
                     box-shadow: unset !important;
-
+                    border: 1px solid white;
                 }
             }
         }

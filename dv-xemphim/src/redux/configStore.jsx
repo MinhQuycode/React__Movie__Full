@@ -9,6 +9,7 @@ import cinemasReducer from "./reducers/cinemas.reducer";
 import showTimesReducer from "./reducers/showtimes.reducer";
 import chairListReducer from "./reducers/booking.reducer";
 import inforMovieReducer from "./reducers/inforMovie.reducer";
+import movieSearch from "./reducers/searchMovie.reducer";
 
 const rootReducer = combineReducers({
   //reducer khai báo tại đây
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   showTimes : showTimesReducer,
   chair : chairListReducer,
   inforMovie : inforMovieReducer,
+  movieSearch : movieSearch
 });
 
 //Tham số thứ 2 của midleware khai báo tại đây

@@ -10,14 +10,14 @@ import Loading from '../../Layouts/Loading/Loading';
 
 export default function Detail(props) {
     const {id} = useParams();
-    console.log(id)
+    // console.log(id)
     const dispatch = useDispatch();
     const inforMovie = useSelector(state => state.inforMovie.inforMovie);
     const loading = useSelector(state => state.inforMovie.loading);
-    console.log(inforMovie)
+    // console.log(inforMovie)
     useEffect(() => {
         dispatch(getInforMovieListAPI(id));        
-    },[dispatch]);
+    },[dispatch,id]);
 
     if(loading === true) return (<Loading/>) 
     return (

@@ -17,7 +17,6 @@ import Swal from 'sweetalert2';
 import {useHistory} from "react-router-dom";
 import {connect} from 'react-redux';
 import Error from '../../Layouts/Error/Error';
-import Loading from "../../Layouts/Loading/Loading";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -68,7 +67,7 @@ const [user,setUser] = useState({
 });
 const handleChange = (event) =>{
   let {value,name,type} = event.target;
-   console.log(value,name);
+  //  console.log(value,name);
 
    let newValue = {...user.values,[name]:value}
    let newError = {...user.errors};
@@ -146,8 +145,6 @@ const handleSubmit = (event) =>{
   dispatch(signUpAPI(user.values,history));
   console.log(user);
 };
-
-// if(props.loading) return <Loading/>
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
