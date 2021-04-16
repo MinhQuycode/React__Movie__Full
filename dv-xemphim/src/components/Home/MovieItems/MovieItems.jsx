@@ -5,6 +5,7 @@ import {useHistory} from "react-router-dom";
 
 export default function MovieItems(props) {
     const history = useHistory();
+    
     const handleClickMovie = (idMovie) =>{
         history.push({pathname : `/detail/${idMovie}`});
     }
