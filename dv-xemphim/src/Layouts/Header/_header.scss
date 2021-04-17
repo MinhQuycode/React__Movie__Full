@@ -38,6 +38,7 @@ header {
                 .nav-item {
                     position: relative;
                     .nav-link {
+                        width: 100%;
                         position: relative;
                         z-index: 1;
                         color: white;
@@ -65,7 +66,35 @@ header {
                             color: orangered;
                         }
                     }
+                    
                 }
+                .user__account{
+                    .account{
+                        cursor: pointer;
+                        position: absolute;
+                        background-color: orangered;
+                        color: transparent;
+                        top: 101%;
+                        right: -1px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        width: 103px;
+                        height: 0px;
+                        text-align: center;
+                        line-height: 35px;
+                        transition: all .2s ease-in-out;
+                        border-left: 1px solid white;
+                        border-right: 1px solid white;
+                    }
+                    &:hover{
+                        .account{
+                        height: 35px;
+                        color: white;
+                    }
+                }
+            }
+                
+                
                 .nav-item:first-child {
                     border-left: 1px solid white;
                     border-right: 1px solid white;

@@ -9,10 +9,13 @@ import {Redirect} from "react-router-dom";
 import { useParams } from "react-router-dom";
 import ScrollToTop from "../../Layouts/ScrollToTop/ScrollToTop";
 import TimeBooking from "./TimeBooking";
+import Notfound from "../PageNotFound/Notfound";
 
 export default function Booking(props) {
   let inforBK = useSelector((state) => state.chair.inforBooking);
   let chairList = useSelector((state) => state.chair.chairList);
+  let error = useSelector((state) => state.chair.error);
+  console.log(error);
   const { id } = useParams();
   const userSignIn = JSON.parse(localStorage.getItem('userLogin'));
   // console.log(userSignIn);
@@ -20,7 +23,7 @@ export default function Booking(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getChairListAPI(id));
-  }, []);
+  }, [dispatch,id]);
 
   //Chia mảng ghế
   const chunkArray = (myArray, chunk_size) => {
@@ -41,9 +44,10 @@ export default function Booking(props) {
       return <ChairRoom chair={item} key={index} />;
     });
   };
-
+  
+  if(error) return (<Notfound/>)
   if(chairList === null ) return (<Loading/>);
-
+ 
   return userSignIn ? (
     <section id="booking" className="container-fluid">
       <ScrollToTop/>

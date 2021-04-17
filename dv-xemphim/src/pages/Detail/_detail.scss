@@ -114,4 +114,52 @@
     .nonDispkay{
         display: none;
     }
+    //RESPONESIVE
+    @media only screen and (max-width: 815px) {
+        .trailer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                margin-right: 2rem;
+            }
+            .booking{
+                button{
+                    width: 90px;
+                    margin-left: 1rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .detail__text{
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+    //Showtime
+    @media only screen and (max-width: 845px) {
+        .showsTime{
+            flex-direction: column;
+            .showTheater{
+                height: 100px;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                border-bottom: 1px solid black;
+                border-right: unset;
+                width: 100% !important;
+                .theater_item{
+                    border: unset;
+                    span{
+                        display: none;
+                    }
+                }
+            }
+            .showTime{
+                .hour{
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+    }
 }

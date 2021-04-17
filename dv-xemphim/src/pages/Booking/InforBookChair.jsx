@@ -32,9 +32,8 @@ export default function InforBookChair(props) {
   //Kiểm tra trước khi đặt vé 
   let check;
   chairBooking.length > 0 ? check = false : check = true;
-  
-  console.log(chairBooking.length)
-console.log(check);
+  // console.log(chairBooking.length)
+// console.log(check);
   return (
     <div className="infor__booking">
       <p className="price">{tongTien()} Đ</p>

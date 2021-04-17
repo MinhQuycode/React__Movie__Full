@@ -30,7 +30,7 @@ function Slickslide(props) {
         dots: false,
         infinite: true,
         speed: 1000,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         slidesToShow: 4,
         slidesToScroll:4,
         autoplay: true,

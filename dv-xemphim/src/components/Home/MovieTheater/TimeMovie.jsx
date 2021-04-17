@@ -27,7 +27,7 @@ function TimeMovie() {
     }, [dispatch,codeTheater.maHeThongRap]);
     //Lấy thời gian lịch chiếu
     const stateShowtime = useSelector(state => state.showTimes.showTimes);
-    console.log(stateShowtime);
+    // console.log(stateShowtime);
 
 
     return stateShowtime?.length > 0 ? (
@@ -40,7 +40,7 @@ function TimeMovie() {
             .filter((tile) => tile.maCumRap === idTheaterChoose)
             .map((tile) =>
               tile.danhSachPhim.map((movie, index) => {
-              console.log(movie)
+              // console.log(movie)
               if(movie) {
               return (
                 <div key={index} className="row chieu">

@@ -7,8 +7,10 @@ import {useParams} from "react-router-dom";
 import {getInforMovieListAPI } from "./../../redux/actions/inforMovie.action";
 import ScrollToTop from '../../Layouts/ScrollToTop/ScrollToTop';
 import Loading from '../../Layouts/Loading/Loading';
+import Notfound from '../PageNotFound/Notfound';
 
 export default function Detail(props) {
+    let error = useSelector((state) => state.inforMovie.error);
     const {id} = useParams();
     // console.log(id)
     const dispatch = useDispatch();
@@ -19,6 +21,7 @@ export default function Detail(props) {
         dispatch(getInforMovieListAPI(id));        
     },[dispatch,id]);
 
+    if(error) return (<Notfound/>) 
     if(loading === true) return (<Loading/>) 
     return (
         <div id="detail">

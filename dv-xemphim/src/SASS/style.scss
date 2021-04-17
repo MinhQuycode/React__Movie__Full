@@ -5,7 +5,6 @@
 @import '../Layouts/Header/header';
 @import './../components/Home/Carousel/carouselItem';
 @import '../Layouts/Footer/footer';
-@import '../components/Home/Search/search';
 @import '../components/Home/ReactSlick/slickslide';
 @import '../components/Home/SlideMobie/slideMobile';
 @import '../components/Home/MovieItems/movieItem';
@@ -16,3 +15,5 @@
 @import '../components/Home/VideoTrailer/videoTrailer';
 @import 'node_modules/react-modal-video/scss/modal-video.scss';
 @import '../pages/Detail/detail';
+@import '../pages/PageNotFound/notfound';
+@import '../pages/Account/account.scss'

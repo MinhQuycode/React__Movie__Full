@@ -1,19 +1,48 @@
-import React from 'react'
-import ReactPlayer from 'react-player'
+import React, {useState,useEffect } from 'react'
+import ReactPlayer from 'react-player';
+import $ from "jquery";
 
 export default function InforMovie(props) {
-  console.log(props.infor)
+  //Lấy kích thước màn h
+  const hasWindow = typeof window !== 'undefined';
+
+  const getWindowDimensions = () => {
+    const width = hasWindow ? window.innerWidth : null;
+    return {
+      width
+    };
+  }
+
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    if (hasWindow) {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, [hasWindow]);
+// console.log(windowDimensions);
+
+let col = "col-6";
+windowDimensions.width <= 815 ?  col = "col-12" : col = "col-6";
+
+
+
+
     return (
       <div className="row detail__trailer">
-        <div className="col-5 trailer">
+        <div className={`${col} trailer`}>
           <img src={props.infor?.hinhAnh} />
           <div className="booking">
             <a href="#lich">
-              <button className="btn btn-warning">
+              <button className="btn btn-warning mr-1">
                 <i className="fas fa-money-check"></i>BOOKING
               </button>
             </a>
-              <button type="button" className="btn btn-primary ml-2" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <button type="button" className="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
                 <i className="fas fa-play"></i>
                 TRAILER
               </button>
@@ -32,7 +61,7 @@ export default function InforMovie(props) {
               </div>
           </div>
         </div>
-        <div className="col-7 detail__text">
+        <div className={`${col} detail__text`}>
           <h3>{props.infor?.tenPhim}</h3>
           <p>
             <span>Mô tả :</span> {props.infor?.moTa}{" "}

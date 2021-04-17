@@ -13,18 +13,19 @@ import React , {useEffect,Suspense} from 'react';
 import Loading from "./Layouts/Loading/Loading";
 import Booking from './pages/Booking/Booking';
 import {useDispatch} from "react-redux";
+import Account from './pages/Account/Account';
 
 function App() {
   const dispatch = useDispatch();
   //Kiểm tra localStorage có tài khoản đang đăng nhập không
-   const _getCredentialfromLocal = () =>{
+   const getCredentialfromLocal = () =>{
     const credentialsStr = localStorage.getItem("userLogin");
     if(credentialsStr) {
     dispatch(signInActionSuccess(JSON.parse(credentialsStr)))
     }
   }
   useEffect(() => {
-    _getCredentialfromLocal(); 
+    getCredentialfromLocal(); 
    },[dispatch]);
    
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route exact path="/detail/:id" component={Detail}/>
         <Route exact path="/" component={Home}/>
         <Route exact path="/booking/:id" component={Booking}/>
+        <Route exact path="/account" component={Account}/>
         <Route path="*" component={Notfound}/>
       </Switch>
       <Footer/>

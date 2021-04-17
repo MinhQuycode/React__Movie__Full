@@ -12,8 +12,7 @@ function Header(props) {
   const history = useHistory();
 
   const movieSearch = useSelector(state => state.movieSearch.movieSearch);
-  console.log(movieSearch)
-
+  // console.log(movieSearch)
 
   const handleLogout = (event) => {
     event.preventDefault();
@@ -29,9 +28,6 @@ function Header(props) {
     event.preventDefault();
     dispatch(getMovieSearchAPI(state.nameMovie,history));
   }
-
-
-
 
   return (
     <header>
@@ -89,10 +85,11 @@ function Header(props) {
             </li>
             {props.credential ? (
               <>
-                <li className="nav-item">
+                <li className="nav-item user__account">
                   <NavLink className="nav-link" style={{color:"black"}}  to="">
                     Hi,{props.credential.hoTen}
                   </NavLink>
+                  <NavLink className="account" to="/account">Tài khoản</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" style={{color:"black"}} to="/" onClick={handleLogout}>

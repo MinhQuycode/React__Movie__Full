@@ -36,6 +36,7 @@
                     img{
                         width: 20px;
                         margin-right: 15px;
+                        cursor: pointer;
                         &:hover{
                             transform: scale(1.1);
                         }
@@ -62,7 +63,7 @@
             p {
             font-weight: 600;
             &:hover{
-                color: red;
+                color: orangered;
             }
             }
             &:hover {
@@ -80,6 +81,7 @@
                 img{
                     width: 20px;
                     margin-right: 15px;
+                    cursor: pointer;
                     &:hover{
                         transform: scale(1.1);
                     }

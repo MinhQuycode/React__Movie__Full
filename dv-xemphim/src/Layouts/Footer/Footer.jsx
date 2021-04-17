@@ -16,7 +16,7 @@
         <div className="col-md-12 col-lg-6 text-right p-0">
           <ul>
             <li>
-              <a className="border__none">Zalo cá nhân</a>
+              <a href="#" className="border__none">Zalo cá nhân</a>
             </li>
             <li>
               <a href="https://www.facebook.com/phamminhquy0403">Facebook cá nhân</a>
@@ -30,31 +30,31 @@
           </ul>
           <ul>
             <li>
-              <a className="border__none">Đồ án cuối khóa</a>
+              <a href="#" className="border__none">Đồ án cuối khóa</a>
             </li>
             <li>
-              <a>My Personal Information </a>
+              <a href="#">My Personal Information </a>
             </li>
             <li>
-              <a>Phạm Minh Quý</a>
+              <a href="#">Phạm Minh Quý</a>
             </li>
           </ul>
         </div>
       </div>
       <div className="row footer__item__5">
-        <a className="img__none">
+        <a href="#" className="img__none">
           <img className="img-fluid" src={zion} />
         </a>
-        <a className="img__none">
+        <a href="#" className="img__none">
           <img className="img-fluid" src={galaxy} />
         </a>
-        <a>
+        <a href="#">
           <img className="img-fluid" src={logo} />
         </a>
-        <a className="img__none">
+        <a href="#" className="img__none">
           <img className="img-fluid" src={cgv} />
         </a>
-        <a className="img__none">
+        <a href="#" className="img__none">
           <img className="img-fluid" src={bhd} />
         </a>
       </div>

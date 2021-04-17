@@ -16,7 +16,6 @@ export default function CarouselItem() {
     const renderCarousel = () => {
         return (
             carouselData.map((item, index) => {
-                console.log(index)
                 return (
                     <VideoTrailer key={index} item={item}/>
                 )
