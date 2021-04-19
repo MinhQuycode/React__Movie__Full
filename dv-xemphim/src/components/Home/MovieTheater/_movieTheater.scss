@@ -22,6 +22,10 @@
             img{
                 width: 110px;
             }
+            &:hover{
+                opacity: 1;
+                transition: ease-out 0.5s all;
+            }
         }
     }
     .chon__rap{
@@ -32,7 +36,6 @@
                 color: black;
             }
             .chon__tenRap{
-                // background-color: lightblue;
                 height: 500px;
                 overflow: auto;
                 padding: 1rem;
@@ -45,6 +48,10 @@
                     width: 100%;
                     img{
                         width: 60px;
+                    }
+                    &:hover{
+                        opacity: 1;
+                        transition: ease-out 0.5s all;
                     }
                     .detail__rap{
                         margin-left: 10px;
