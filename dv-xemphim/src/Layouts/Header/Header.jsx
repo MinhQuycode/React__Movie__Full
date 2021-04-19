@@ -132,7 +132,7 @@ function Header(props) {
                 <div className=" input-group-prepend">
                   <button
                     className=" input--header input-group-text"
-                    id="basic-addon1"
+                    id="basic-addon2"
                     type="submit"
                   >
                     <i className="fas fa-search" />
@@ -145,7 +145,7 @@ function Header(props) {
                   className="input--header form-control"
                   placeholder={placeholder}
                   aria-label="Username"
-                  aria-describedby="basic-addon1"
+                  aria-describedby="basic-addon2"
                 />
               </form>
             </li>
