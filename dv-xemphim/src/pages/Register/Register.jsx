@@ -10,7 +10,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import { signUpAPI } from '../../redux/actions/register.action';
 import Swal from 'sweetalert2';
@@ -145,7 +145,8 @@ const handleSubmit = (event) =>{
   dispatch(signUpAPI(user.values,history));
   console.log(user);
 };
-  return (
+const userSignIn = JSON.parse(localStorage.getItem('userLogin'));
+  return !userSignIn? (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -271,6 +272,8 @@ const handleSubmit = (event) =>{
         </form>
       </div> <br/> <br/>
     </Container>
+  ):(
+    <Redirect to="/"/>
   );
 }
 const mapStateToProps = (state) =>({

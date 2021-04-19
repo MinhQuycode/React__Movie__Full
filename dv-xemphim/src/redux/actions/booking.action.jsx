@@ -48,7 +48,7 @@ export const bookChairAction = (maGhe,giaVe,tenGhe) =>{
 }
 
 
-export const bookingTicketAPI = (maLichChieu, danhSachVe,history) => {
+export const bookingTicketAPI = (maLichChieu, danhSachVe) => {
     return async (dispatch) => {
       try {
         const user = JSON.parse(localStorage.getItem("userLogin"));
@@ -64,7 +64,6 @@ export const bookingTicketAPI = (maLichChieu, danhSachVe,history) => {
             Authorization: `Bearer ${user.accessToken}`,
           },
         });
-        // history.push("/");
       } catch (error) {
         console.log(error);
       }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import carouselData from './CarouselData';
 import Slider from "react-slick";
 import VideoTrailer from '../VideoTrailer/VideoTrailer';

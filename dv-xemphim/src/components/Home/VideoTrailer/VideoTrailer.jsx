@@ -1,9 +1,9 @@
-import React ,{useState} from 'react'
-import play from '../../../assets/images/play.png';
-import ModalVideo from 'react-modal-video';
+import React from 'react'
+// import play from '../../../assets/images/play.png';
+// import ModalVideo from 'react-modal-video';
 
 export default function VideoTrailer(props) {
-    const [isOpen, setOpen] = useState(false);
+    // const [isOpen, setOpen] = useState(false);
 
     return (
         <div className="trailer position-relative">

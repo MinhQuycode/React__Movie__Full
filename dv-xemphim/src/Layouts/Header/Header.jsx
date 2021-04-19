@@ -3,7 +3,7 @@ import { NavLink, useHistory } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { connect } from "react-redux";
 import { actLogout } from "../../redux/actions/login.action";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import {getMovieSearchAPI} from "./../../redux/actions/searchMovie.action";
 
 function Header(props) {
@@ -11,7 +11,7 @@ function Header(props) {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const movieSearch = useSelector(state => state.movieSearch.movieSearch);
+  // const movieSearch = useSelector(state => state.movieSearch.movieSearch);
   // console.log(movieSearch)
 
   const handleLogout = (event) => {

@@ -15,7 +15,7 @@ export default function MovieItems(props) {
         }}>
         <div className="movieItem__img">
             <a className="img__link">
-                <img className="img-fluid img__movie" src={props.item.hinhAnh}/>
+                <img className="img-fluid img__movie" src={props.item.hinhAnh} alt="anh"/>
             </a>
         </div>
         <div className="showing__head">

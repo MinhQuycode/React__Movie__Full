@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React,{useEffect} from 'react';
 import { getShowTimeAPI } from '../../../redux/actions/showtimes.action';
 import {useSelector,useDispatch} from "react-redux";
 import { useHistory } from 'react-router-dom';
@@ -45,7 +45,7 @@ function TimeMovie() {
               return (
                 <div key={index} className="row chieu">
                   <div className="col-4">
-                    <img src={movie.hinhAnh} />
+                    <img src={movie.hinhAnh} alt="anh"/>
                     <div
                       className="mt-2 text-center"
                       style={{ fontWeight: "bold", fontSize: 20 }}

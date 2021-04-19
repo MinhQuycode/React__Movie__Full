@@ -1,6 +1,5 @@
 import React, {useState,useEffect } from 'react'
 import ReactPlayer from 'react-player';
-import $ from "jquery";
 
 export default function InforMovie(props) {
   //Lấy kích thước màn h
@@ -35,7 +34,7 @@ windowDimensions.width <= 815 ?  col = "col-12" : col = "col-6";
     return (
       <div className="row detail__trailer">
         <div className={`${col} trailer`}>
-          <img src={props.infor?.hinhAnh} />
+          <img src={props.infor?.hinhAnh}  alt="anh"/>
           <div className="booking">
             <a href="#lich">
               <button className="btn btn-warning mr-1">

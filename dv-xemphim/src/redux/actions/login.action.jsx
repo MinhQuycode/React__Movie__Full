@@ -1,7 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 import { SIGN_IN_REQUEST,SIGN_IN_SUCCESS,SIGN_IN_FAILED,LOG_OUT} from "../constants/login.constant";
-import {useHistory} from "react-router-dom";
 
 
 
@@ -39,7 +38,8 @@ export const signInAPI = (user,history) =>{
             //Lưu trên localstrorage
             localStorage.setItem("userLogin",JSON.stringify(res.data));
             //Chuyển về trang trước khi đăng nhập thành công
-            history.push("/home");
+            // history.push("/home");
+            history.goBack();
         } catch(error){
             dispatch(signInActionFailed(error));
         }

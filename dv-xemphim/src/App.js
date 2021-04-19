@@ -1,5 +1,4 @@
-
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Detail from './pages/Detail/Detail';
@@ -14,6 +13,9 @@ import Loading from "./Layouts/Loading/Loading";
 import Booking from './pages/Booking/Booking';
 import {useDispatch} from "react-redux";
 import Account from './pages/Account/Account';
+// animation
+import ScrollToTop from './Layouts/ScrollToTop/ScrollToTop';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -28,9 +30,12 @@ function App() {
     getCredentialfromLocal(); 
    },[dispatch]);
    
+
+  //  Animation
   return (
-    <BrowserRouter>
+    <Router>
     <Suspense fallback={<Loading/>}>
+      <ScrollToTop/>
     <Header/>
       <Switch>
         <Route exact path="/home" component={Home}/>
@@ -44,7 +49,7 @@ function App() {
       </Switch>
       <Footer/>
       </Suspense>
-    </BrowserRouter>
+    </Router>
   ); 
 }
 export default connect() (App);

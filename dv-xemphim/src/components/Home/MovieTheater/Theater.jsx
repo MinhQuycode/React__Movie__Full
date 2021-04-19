@@ -27,7 +27,7 @@ function Theater() {
                 return (
                   <div key={index} className={`chon__item ${isRowSelected===index ? Active : nonClassActive}`}  
                   onClick={() => (isRowSelected === index ? '' : chooseTheater(cinemas.maCumRap,index))}>
-                    <img src={logoTheater.logo}/>
+                    <img src={logoTheater.logo} alt="anh"/>
                     <div className="detail__rap">
                       <h5 className="tenRap">{cinemas.tenCumRap}</h5>
                       <p className="diaChi">

@@ -33,7 +33,7 @@ function MovieTheater(props) {
                 return (
                     <div key={index} className={`col-2 cumrap__item ${isSelected===index ? Active : nonClassActive}`}  
                     onClick={() => (isSelected === index ? '' : chooseTheaterGroup(theater.maHeThongRap,theater.logo, index))}>
-                        <img src={theater.logo}/>
+                        <img src={theater.logo} alt="anh"/>
                     </div>
                 )
             })

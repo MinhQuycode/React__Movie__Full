@@ -16,7 +16,7 @@
         <div className="col-md-12 col-lg-6 text-right p-0">
           <ul>
             <li>
-              <a href="#" className="border__none">Zalo cá nhân</a>
+              <a href="https://chat.zalo.me/" className="border__none">Zalo cá nhân</a>
             </li>
             <li>
               <a href="https://www.facebook.com/phamminhquy0403">Facebook cá nhân</a>
@@ -30,33 +30,33 @@
           </ul>
           <ul>
             <li>
-              <a href="#" className="border__none">Đồ án cuối khóa</a>
+              <span className="border__none">Đồ án cuối khóa</span>
             </li>
             <li>
-              <a href="#">My Personal Information </a>
+              <span>My Personal Information </span>
             </li>
             <li>
-              <a href="#">Phạm Minh Quý</a>
+              <span>Phạm Minh Quý</span>
             </li>
           </ul>
         </div>
       </div>
       <div className="row footer__item__5">
-        <a href="#" className="img__none">
-          <img className="img-fluid" src={zion} />
-        </a>
-        <a href="#" className="img__none">
-          <img className="img-fluid" src={galaxy} />
-        </a>
-        <a href="#">
-          <img className="img-fluid" src={logo} />
-        </a>
-        <a href="#" className="img__none">
-          <img className="img-fluid" src={cgv} />
-        </a>
-        <a href="#" className="img__none">
-          <img className="img-fluid" src={bhd} />
-        </a>
+        <div className="img__none">
+          <img className="img-fluid" src={zion} alt="anh" />
+        </div>
+        <div className="img__none">
+          <img className="img-fluid" src={galaxy} alt="anh"/>
+        </div>
+        <div>
+          <img className="img-fluid" src={logo} alt="anh" />
+        </div>
+        <div className="img__none">
+          <img className="img-fluid" src={cgv}  alt="anh"/>
+        </div>
+        <div className="img__none">
+          <img className="img-fluid" src={bhd}  alt="anh"/>
+        </div>
       </div>
       <div className="row footer__item__6 pb-3">
         <div className="col-md-12 col-lg-6">

@@ -18,7 +18,7 @@ export default function SlideMobie() {
             slideMobileData.map((slide, index) => {
                 return (
                     <div key={index}>
-                        <img className="img-fluid img__mobile" src={slide.hinhAnh} />
+                        <img className="img-fluid img__mobile" src={slide.hinhAnh}  alt="anh"/>
                     </div>
                 )
             })

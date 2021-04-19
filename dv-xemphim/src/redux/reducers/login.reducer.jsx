@@ -1,6 +1,5 @@
 import { SIGN_IN_REQUEST,SIGN_IN_FAILED,SIGN_IN_SUCCESS,LOG_OUT } from "../constants/login.constant";
 
-const user = "userLogin";
 const initialState = {
     loading :false,
     userSignin : null,

@@ -55,7 +55,7 @@ export default function Booking(props) {
         <div className="col-lg-8 col-md-12">
           <div className="row infor__movie">
             <div className="col-6 info__movie">
-              <img className="imgMovie" src={inforBK?.hinhAnh} />
+              <img className="imgMovie" src={inforBK?.hinhAnh} alt="anh"/>
               <div className="infor">
                 <p>{inforBK?.tenPhim}</p>
                 <p>{inforBK?.diaChi}</p>
@@ -64,7 +64,7 @@ export default function Booking(props) {
             <TimeBooking/>
           </div>
           <div className="row screen">
-            <img src={screen} />
+            <img src={screen} alt="anh"/>
           </div>
           <div className="row chair">
             {renderChairList()}

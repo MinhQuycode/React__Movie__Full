@@ -37,7 +37,7 @@ export default function ShowTimeMovie(props) {
                     isSelected === index ? '':chooseTheaterGroup(theater.maHeThongRap,theater.logo,index)
                   )} 
                   >
-                    <img src={theater.logo} />
+                    <img src={theater.logo} alt="anh"/>
                     <span>{theater.tenHeThongRap}</span>
                   </div>
                 );
@@ -89,7 +89,7 @@ windowDimensions.width <= 845 ?  col2 = "col-12" : col2 = "col-8";
                   return (
                     <div key={index} className="hour">
                       <div className="hour__theater">
-                        <img src={showTimes.logo} />
+                        <img src={showTimes.logo} alt="anh" />
                         <span>{cumRap?.tenCumRap}</span>
                       </div>
                       <p>Giờ chiếu :</p>
