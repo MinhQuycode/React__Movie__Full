@@ -41,14 +41,7 @@ function App() {
       <ScrollToTop/>
     <Suspense fallback={<Loading/>}>
     <Header/>
-    <Route render={({location})=>(
-      <TransitionGroup>
-        <CSSTransition
-          key={location.key}
-          timeout={0}
-          classNames="item"
-                >
-          <Switch location={location}>
+          <Switch>
             <Route exact path="/home" component={Home}/>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/register" component={Register}/>
@@ -58,9 +51,6 @@ function App() {
             <Route exact path="/account" component={Account}/>
             <Route path="*" component={Notfound}/>
           </Switch>
-          </CSSTransition>
-        </TransitionGroup>
-    )}/>
       <Footer/>
       </Suspense>
     </Router>
