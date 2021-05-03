@@ -2,6 +2,7 @@
   "name": "dv-xemphim",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://192.168.0.106:5000",
   "dependencies": {
     "@agney/react-loading": "^0.1.2",
     "@material-ui/core": "^4.11.3",
