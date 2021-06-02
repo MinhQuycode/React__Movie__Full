@@ -41,9 +41,6 @@ function Theater() {
     }
     return (
         <div className="col-lg-6 col-md-12 rap">
-        <div className="row">
-            <h3 className="title__chon text-center mt-4">Chọn rạp</h3>
-        </div>
         <div className="row chon__tenRap">
             {renderTheater()}
         </div>

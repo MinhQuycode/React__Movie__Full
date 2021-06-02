@@ -11,9 +11,6 @@ function Header(props) {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  // const movieSearch = useSelector(state => state.movieSearch.movieSearch);
-  // console.log(movieSearch)
-
   const handleLogout = (event) => {
     event.preventDefault();
     dispatch(actLogout(event,history));
@@ -23,7 +20,7 @@ function Header(props) {
     setstate({nameMovie : event.target.value});
     console.log(state.nameMovie)
   }
-  let placeholder = "Tìm tên phim muốn xem..."
+  let placeholder = "Có thể test bằng tài khoản : string và mật khẩu string "
   const handleSubmit = (event) =>{
     event.preventDefault();
     dispatch(getMovieSearchAPI(state.nameMovie,history));
@@ -46,7 +43,7 @@ function Header(props) {
             onChange={handleChange}
             type="text"
             className="input--header form-control"
-            placeholder="Tìm tên phim muốn xem..."
+            placeholder="Test tài khoản : string và mật khẩu : string"
             aria-label="Username"
             name="nameMovie"
             aria-describedby="basic-addon1"
@@ -89,7 +86,7 @@ function Header(props) {
                   <NavLink className="nav-link" style={{color:"black"}}  to="">
                     Hi,{props.credential.hoTen}
                   </NavLink>
-                  <NavLink className="account" to="/account">Tài khoản</NavLink>
+                  {/* <NavLink className="account" to="/account">Tài khoản</NavLink> */}
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" style={{color:"black"}} to="/" onClick={handleLogout}>

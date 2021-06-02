@@ -41,7 +41,7 @@ function MovieTheater(props) {
     }
     return (
         <section id="cumrap">
-            <h3 className="title__cumrap">Cụm rạp</h3>
+            <h3 className="title__cumrap" style={{color: 'orangered'}}>Cụm rạp</h3>
             <div className="row cumrap__main">
                 {renderTheater()}
             </div>

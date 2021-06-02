@@ -61,7 +61,10 @@ windowDimensions.width <= 815 ?  col = "col-12" : col = "col-6";
           </div>
         </div>
         <div className={`${col} detail__text`}>
-          <h3>{props.infor?.tenPhim}</h3>
+          <div>
+            <h3>{props.infor?.tenPhim}</h3>
+          </div>
+          <div style={{maxHeight: "280px", overflow:"auto"}}>
           <p>
             <span>Mô tả :</span> {props.infor?.moTa}{" "}
           </p>
@@ -86,6 +89,7 @@ windowDimensions.width <= 815 ?  col = "col-12" : col = "col-6";
           <p>
             <span>Đánh giá :</span> {props.infor?.danhGia} <i style={{ color: "orangered",height:'17px' }} className="fas fa-star"></i>
           </p>
+          </div>
         </div>
       </div>
     );

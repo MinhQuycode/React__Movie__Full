@@ -97,6 +97,7 @@ windowDimensions.width <= 845 ?  col2 = "col-12" : col2 = "col-8";
                         {cumRap.lichChieuPhim?.map((item, index) => {
                           return (
                             <button
+                            style={{fontWeight:"bold"}}
                               className={`btn btn-warning mr-2 mb-2`}
                               key={index}
                               onClick={() => {
@@ -104,7 +105,7 @@ windowDimensions.width <= 845 ?  col2 = "col-12" : col2 = "col-8";
                               }}
                             >
                               {item.ngayChieuGioChieu?.substring(11, 16) + "~"}
-                              <b>{item.ngayChieuGioChieu?.substring(5, 10)}</b>
+                              <span style={{color:"green"}}>{item.ngayChieuGioChieu?.substring(5, 10)}</span>
                             </button>
                           );
                         })}

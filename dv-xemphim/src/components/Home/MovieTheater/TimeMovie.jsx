@@ -32,9 +32,6 @@ function TimeMovie() {
 
     return stateShowtime?.length > 0 ? (
       <div className="col-lg-6 col-md-12 lich__chieu">
-        <div className="row">
-          <h3 className="title__chon text-center mt-4">Chọn lịch chiếu</h3>
-        </div>
         <div className="lich">
           {stateShowtime[0].lstCumRap
             .filter((tile) => tile.maCumRap === idTheaterChoose)
@@ -54,21 +51,26 @@ function TimeMovie() {
                     </div>
                   </div>
                   <div className="col-8 info_lich">
-                    <span className="name__movie">{movie.tenPhim}</span>
-                    <p style={{ fontWeight: "bold" }}>Lịch chiếu :</p>
+                    <div className="pl-2">
+                      <span className="name__movie">{movie.tenPhim}</span>
+                      <p style={{ fontWeight: "bold" }}>Lịch chiếu :</p>
+                    </div>
+                    <div style={{maxHeight:"290px", overflow:"auto"}}>
                     {movie.lstLichChieuTheoPhim.map((lichChieu, index) => (
                       <button
+                      style={{fontWeight:"bold"}}
                         key={index}
                         className="btn btn-warning m-2"
                         onClick={() => {
                           handleChoiceShowsTime(lichChieu.maLichChieu);
                         }}
                       >{lichChieu.ngayChieuGioChieu?.substring(11,16) + "~"}
-                        <b>
+                        <span style={{color:'green'}}>
                         {lichChieu.ngayChieuGioChieu?.substring(5,10)}
-                        </b>
+                        </span>
                       </button>
                     ))}
+                    </div>
                   </div>
                 </div>
                 )}
